@@ -1,31 +1,36 @@
+/* ──────────────────────────────────────────────────────────
+►►► Post CSS Config
+────────────────────────────────────────────────────────── */
 const purgecss = require('@fullhuman/postcss-purgecss')
 const autoprefixer = require('autoprefixer')
 const inlinesvg = require('postcss-inline-svg')
 
-const dev = process.env.NODE_ENV === "dev"
+/* ─────────────────────────────────────────────────────── */
+const config = require('./utils/config')
+/* ─────────────────────────────────────────────────────── */
 
-let config = {
+let postcss = {
   plugins: [
     inlinesvg()
     // [
     //   'postcss-critical-css', 
     //   {
-    //     outputPath: './views',
-    //     outputDest: 'critical.twig',
+    //     outputPath: config.css.critical.outputPath,
+    //     outputDest: config.css.critical.outputDest,
     //     minify: true
     //   }
     // ]
   ],
 }
 
-if (!dev) {
-  config.plugins.push(autoprefixer())
+if (config.env.isProd) {
+  postcss.plugins.push(autoprefixer())
 
-  config.plugins.push(
+  postcss.plugins.push(
     purgecss({
-      content: ['./public/*.html']
+      content: config.views
     })
   )
 }
 
-module.exports = config
+module.exports = postcss

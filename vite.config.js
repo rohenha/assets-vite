@@ -1,65 +1,33 @@
+/* ──────────────────────────────────────────────────────────
+►►► Vite Config
+────────────────────────────────────────────────────────── */
 import { defineConfig } from 'vite'
-import brotli from "rollup-plugin-brotli"
-import sassGlobImports from 'vite-plugin-sass-glob-import'
-import { svgSprite } from 'rollup-plugin-svgsprite-generator'
 import browserslistToEsbuild from 'browserslist-to-esbuild'
-import { visualizer } from "rollup-plugin-visualizer"
 
-export default ({ mode }) => {
-  const env = process.env.NODE_ENV
-  // const isDev = env === 'development'
-  const isProd = env === 'prod' || env === 'analyze'
-  // console.log();
+/* ─────────────────────────────────────────────────────── */
+import getPlugins from './utils/vite/plugins'
+import config from './utils/config'
+/* ─────────────────────────────────────────────────────── */
 
-  const plugins = [
-    sassGlobImports(),
-    svgSprite({
-      xml: false,
-      doctype: false,
-      idConvert: (id) => `icon-${id}`,
-      input: 'sources/sprite',
-      output: 'public/sprite.twig',
-   }),
-  ]
-
-  if (isProd) {
-    plugins.push(
-      brotli()
-    )
-  }
-
-  if (env === 'analyze') {
-    plugins.push(
-      visualizer({
-        gzipSize: true,
-        brotliSize: true,
-        open: true,
-        template: 'treemap'
-       })
-    )
-  }
-
+export default () => {
   return defineConfig({
-    publicDir: 'sources/assets',
+    publicDir: config.src,
     server: {
       cors: true,
       host: '0.0.0.0',
-      origin: 'http://starter-vite.vm',
+      origin: config.server.url
     },
     build: {
       target: browserslistToEsbuild(),
       emptyOutDir: true,
       manifest: true,
-      sourcemap: isProd ? false : 'inline',
-      minify: isProd ? 'esbuild' : false,
+      sourcemap: config.env.isProd ? false : 'inline',
+      minify: config.env.isProd ? 'esbuild' : false,
       cssCodeSplit: false,
       assetsDir: '',
-      outDir: 'public/assets',
+      outDir: config.dist,
       rollupOptions: {
-        input: [
-          '/sources/scripts/site.js',
-          // '/sources/styles/site.scss',
-        ],
+        input: config.input,
         output: {
           entryFileNames: 'site.[hash].js',
           chunkFileNames: "chunk-[hash].js",
@@ -67,6 +35,7 @@ export default ({ mode }) => {
         },
       },
     },
-    plugins: plugins
+    plugins: getPlugins(config.env),
+    // css: { postcss: "./" }
   })
 }

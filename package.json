@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "vite",
-    "watch": "NODE_ENV=watch vite build --watch",
+    "dev": "NODE_ENV=dev vite",
+    "watch": "NODE_ENV=dev vite build --watch",
     "build": "NODE_ENV=prod vite build",
     "analyze": "NODE_ENV=analyze vite build",
     "preview": "vite preview"
@@ -27,6 +27,7 @@
     "sass": "^1.57.1",
     "terser": "^5.16.2",
     "vite": "^4.1.4",
+    "vite-plugin-browser-sync": "^1.0.3",
     "vite-plugin-sass-glob-import": "^2.0.0"
   },
   "dependencies": {
