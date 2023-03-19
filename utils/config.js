@@ -12,8 +12,9 @@ module.exports = {
     isProd : env === 'prod' || env === 'analyze',
     isAnalyze : env === 'analyze',
   },
-  src: 'sources/assets',
-  dist: 'public/assets',
+  src: 'sources',
+  dist: 'public',
+  folder: 'assets',
   input: [
     'sources/scripts/site.js',
   ],
@@ -30,7 +31,11 @@ module.exports = {
     critical: {
       outputPath: './public',
       outputDest: 'critical.html',
-    }
+    },
+    views: ['./public/*.html']
   },
-  views: ['./public/*.html']
+  views: {
+    snippets: 'project/snippets',
+    templates: 'project/views',
+  }
 }

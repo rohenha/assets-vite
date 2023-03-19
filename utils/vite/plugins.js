@@ -5,6 +5,7 @@ import brotli from "rollup-plugin-brotli"
 import sassGlobImports from 'vite-plugin-sass-glob-import'
 import { visualizer } from "rollup-plugin-visualizer"
 import VitePluginBrowserSync from 'vite-plugin-browser-sync'
+// import { svgSprite } from 'rollup-plugin-svgsprite-generator'
 
 /* ─────────────────────────────────────────────────────── */
 import config from '../config'
@@ -13,6 +14,13 @@ import config from '../config'
 export default ({ isProd, isAnalyze }) => {
   const plugins = [
     sassGlobImports(),
+  //   svgSprite({
+  //     xml: false,
+  //     doctype: false,
+  //     idConvert: config.sprite.name,
+  //     input: config.sprite.input,
+  //     output: config.sprite.output,
+  //  }),
   ]
 
   const pDev = [

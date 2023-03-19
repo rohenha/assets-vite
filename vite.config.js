@@ -11,7 +11,7 @@ import config from './utils/config'
 
 export default () => {
   return defineConfig({
-    publicDir: config.src,
+    publicDir: `${config.src}/${config.folder}`,
     server: {
       cors: true,
       host: '0.0.0.0',
@@ -25,7 +25,7 @@ export default () => {
       minify: config.env.isProd ? 'esbuild' : false,
       cssCodeSplit: false,
       assetsDir: '',
-      outDir: config.dist,
+      outDir: `${config.dist}/${config.folder}`,
       rollupOptions: {
         input: config.input,
         output: {

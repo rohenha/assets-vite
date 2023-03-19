@@ -4,6 +4,9 @@
 const purgecss = require('@fullhuman/postcss-purgecss')
 const autoprefixer = require('autoprefixer')
 const inlinesvg = require('postcss-inline-svg')
+// import inlinesvg from 'postcss-inline-svg'
+// import autoprefixer from 'autoprefixer'
+// import purgecss from '@fullhuman/postcss-purgecss'
 
 /* ─────────────────────────────────────────────────────── */
 const config = require('./utils/config')
@@ -28,7 +31,7 @@ if (config.env.isProd) {
 
   postcss.plugins.push(
     purgecss({
-      content: config.views
+      content: config.css.views
     })
   )
 }

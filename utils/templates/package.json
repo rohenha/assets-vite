@@ -1,0 +1,18 @@
+{
+  "name": "generate-templates",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "template": "node utils/templates"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "inquirer": "^9.1.5"
+  },
+  "dependencies": {
+  }
+}
