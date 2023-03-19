@@ -1,0 +1,18 @@
+{
+  "name": "generate-sprite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sprite": "node utils/sprite"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "svg-sprite": "^2.0.2"
+  },
+  "dependencies": {
+  }
+}

@@ -9,6 +9,7 @@
     "build": "NODE_ENV=prod vite build",
     "analyze": "NODE_ENV=analyze vite build",
     "template": "node utils/templates",
+    "sprite": "node utils/sprite",
     "preview": "vite preview"
   },
   "keywords": [],
@@ -27,6 +28,7 @@
     "rollup-plugin-svgsprite-generator": "^1.1.0",
     "rollup-plugin-visualizer": "^5.9.0",
     "sass": "^1.57.1",
+    "svg-sprite": "^2.0.2",
     "terser": "^5.16.2",
     "vite": "^4.1.4",
     "vite-plugin-browser-sync": "^1.0.3",

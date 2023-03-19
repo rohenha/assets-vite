@@ -24,7 +24,8 @@ module.exports = {
   },
   sprite: {
     input: 'sources/sprite',
-    output: 'public/sprite.twig',
+    output: 'public/',
+    file: 'sprite.twig',
     name: (id) => `icon-${id}`,
   },
   css: {

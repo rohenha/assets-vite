@@ -3,8 +3,10 @@
 ## Already
 - Vite JS Config
 - Post CSS Config
+- Create templates functions
+- Generate Sprites
 
 ## Todo
 - Optimize Images
-- Generate Sprites
-- Create templates functions
+- Refactor CSS
+- Refactor Js
