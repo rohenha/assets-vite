@@ -11,3 +11,7 @@ pnpm-lock.yaml
 public/assets
 public/sprite.twig
 stats.html
+sources/fonts/*
+!sources/fonts/.keep
+sources/assets/fonts/*
+!sources/assets/fonts/.keep

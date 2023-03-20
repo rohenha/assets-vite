@@ -42,3 +42,11 @@ select,
 textarea {
   font-variant-numeric: inherit;
 }
+
+hr {
+  margin: 0;
+  border-width: .1rem;
+  border-style: solid;
+  border-color: black;
+  border-top: 0;
+}

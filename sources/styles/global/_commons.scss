@@ -1,15 +1,10 @@
-html,
-body {
-  width: 100%;
-  min-height: 100%;
-  background-color: var(--cwhite);
-}
-
 html {
-  color: var(--cprimary);
+  background-color: clr(white);
+  width: 100%;
+  color: clr(primary);
   font-weight: normal;
-  font-size: var(--fsize);
-  font-family: var(--font-regular);
+  font-size: $font-size-percent;
+  font-family: $font-regular;
   scroll-behavior: initial;
   font-variant-numeric: lining-nums;
   -webkit-font-smoothing: antialiased;
@@ -17,9 +12,9 @@ html {
   font-smoothing: antialiased;
   -webkit-tap-highlight-color: transparent;
   text-size-adjust: 100%;
+  -webkit-text-size-adjust: none;
 
-  &.is-loading,
-  &.is-loading * {
+  &.is-loading {
     cursor: progress;
     pointer-events: none;
   }
@@ -32,57 +27,4 @@ body {
 
 img {
   max-width: 100%;
-}
-
-hr {
-  margin: 0;
-  border-width: 1px;
-  border-style: solid;
-  border-color: var(--cblack);
-  border-top: 0;
-}
-
-/* stylelint-disable-next-line selector-class-pattern */
-.dg.ac {
-  z-index: 5 !important;
-}
-
-.a-block {
-  width: 100%;
-  height: 50rem;
-
-  &:not(:last-child) {
-    margin-bottom: var(--vr);
-  }
-
-  .g-row {
-    height: 100%;
-  }
-
-  &__child {
-    height: 50%;
-    background-color: red;
-
-    &:first-child {
-      @include gridp(10, 3);
-    }
-
-    &:nth-child(2) {
-      @include gridp(8, 14);
-
-      height: 70%;
-    }
-  }
-
-  &.-primary {
-    background-color: var(--cprimary);
-  }
-
-  &.-secondary {
-    background-color: var(--cfacebook);
-  }
-
-  &.-third {
-    background-color: var(--cinstagram);
-  }
 }

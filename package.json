@@ -10,6 +10,7 @@
     "analyze": "NODE_ENV=analyze vite build",
     "template": "node utils/templates",
     "sprite": "node utils/sprite",
+    "fonts": "node utils/fonts",
     "preview": "vite preview"
   },
   "keywords": [],
@@ -20,6 +21,7 @@
     "@vitejs/plugin-legacy": "^3.0.2",
     "autoprefixer": "^10.4.14",
     "browserslist-to-esbuild": "^1.2.0",
+    "fontmin": "^0.9.9",
     "inquirer": "^9.1.5",
     "postcss": "^8.4.21",
     "postcss-inline-svg": "^6.0.0",

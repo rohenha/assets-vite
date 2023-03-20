@@ -1,10 +1,20 @@
 /* stylelint-disable length-zero-no-unit */
 
+//  G L O B A L
+//  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+$assets-path: "/" !default;
+
 //  V A R I A B L E S
 //  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 $font-size-base: 16;
+$font-size-percent: #{math.div(100, $font-size-base) * 10%};
 
-//  Grid
+// F O N T S
+//  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+$font-regular: 'Radio Grotesk', sans-serif;
+$font-title: 'Radio Grotesk', sans-serif;
+
+//  G R I D
 //  ───────────────────────────────────
 $row-width: 144rem;
 $container-width: 100%;
@@ -17,7 +27,7 @@ $colorcolumnodd: rgba(black, .2);
 $colorcolumneven: rgba(black, .12);
 $colorgutter: rgba(black, .05);
 
-//  Breakpoints
+//  B R E A K P O I N T S
 //  ───────────────────────────────────
 $sm-breakpoint: 640px;
 $md-breakpoint: 1024px;
