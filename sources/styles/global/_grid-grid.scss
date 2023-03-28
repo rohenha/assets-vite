@@ -13,7 +13,7 @@
       z-index: 800;
       display: block;
       width: calc(100% - #{$column-padding * 2});
-      max-width: calc(var(--gwidth) - #{$column-padding * 2});
+      max-width: calc(#{$row-width} - #{$column-padding * 2});
       height: 100%;
       margin: 0 auto;
       background: repeating-linear-gradient(
@@ -38,9 +38,9 @@
   position: relative;
   display: grid;
   grid-template-columns: repeat($total-columns, 1fr);
-  gap: var(--vr) $column-gutter;
+  gap: $vr $column-gutter;
   width: calc(100% - #{$column-padding * 2});
-  max-width: calc(var(--gwidth) - #{$column-padding * 2});
+  max-width: calc(#{$row-width} - #{$column-padding * 2});
   margin: 0 auto;
 
   &.-xl {

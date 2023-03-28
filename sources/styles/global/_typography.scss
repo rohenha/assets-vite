@@ -75,7 +75,7 @@ p,
   }
 }
 
-@media #{$lg} {
+@include media(lg, up) {
   // TITLES
   h1,
   .a-h1 {

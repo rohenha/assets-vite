@@ -6,16 +6,13 @@
 .row {
   position: relative;
   display: flex;
-
   // Wrap
   flex-wrap: wrap;
   align-items: stretch;
-
   // alignment
   justify-content: flex-start;
   width: $container-width;
-
-  // max-width: $row-width;
+  max-width: $row-width;
   margin: 0 auto;
 
   &.xl {
@@ -215,14 +212,14 @@
   }
 }
 
-@media only screen and (max-width: $md-breakpoint) {
-  .sm-horizontal {
-    flex-wrap: nowrap;
-    overflow: auto;
+// @media only screen and (max-width: $md-breakpoint) {
+//   .sm-horizontal {
+//     flex-wrap: nowrap;
+//     overflow: auto;
 
-    li {
-      flex: 0 0 auto;
-      width: auto;
-    }
-  }
-}
+//     li {
+//       flex: 0 0 auto;
+//       width: auto;
+//     }
+//   }
+// }

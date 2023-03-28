@@ -1,4 +1,3 @@
-import '../styles/site.scss'
 import User from './User'
 
 const user1 = new User('Thomas')

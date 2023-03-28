@@ -26,11 +26,11 @@ let postcss = {
 if (config.env.isProd) {
   postcss.plugins.push(autoprefixer())
 
-  // postcss.plugins.push(
-  //   purgecss({
-  //     content: config.css.views
-  //   })
-  // )
+  postcss.plugins.push(
+    purgecss({
+      content: config.css.views
+    })
+  )
 }
 
 module.exports = postcss
