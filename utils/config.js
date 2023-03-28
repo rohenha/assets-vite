@@ -17,6 +17,7 @@ module.exports = {
   folder: 'assets',
   input: [
     'sources/scripts/site.js',
+    'sources/styles/site.scss',
   ],
   server: {
     url: 'http://starter-vite.vm',

@@ -23,15 +23,14 @@ export default () => {
       manifest: true,
       sourcemap: config.env.isProd ? false : 'inline',
       minify: config.env.isProd ? 'esbuild' : false,
-      cssCodeSplit: false,
       assetsDir: '',
       outDir: `${config.dist}/${config.folder}`,
       rollupOptions: {
         input: config.input,
         output: {
-          entryFileNames: 'site.[hash].js',
+          entryFileNames: '[name].[hash].js',
           chunkFileNames: "chunk-[hash].js",
-          assetFileNames: "site.[hash].[ext]",
+          assetFileNames: "[name].[hash].[ext]",
         },
       },
     },
