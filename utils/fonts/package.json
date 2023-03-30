@@ -1,0 +1,18 @@
+{
+  "name": "generate-fonts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sprite": "node utils/fonts"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "fontmin": "^0.9.9"
+  },
+  "dependencies": {
+  }
+}
