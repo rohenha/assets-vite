@@ -28,3 +28,24 @@ body {
 img {
   max-width: 100%;
 }
+
+.a-block {
+  height: 200px;
+  display: block;
+
+  &.-blue {
+    background-color: blue;
+  }
+
+  &.-red {
+    background-color: red;
+  }
+
+  &.-yellow {
+    background-color: yellow;
+  }
+
+  &.-green {
+    background-color: green;
+  }
+}
