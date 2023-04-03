@@ -22,20 +22,15 @@ export default {
   before() {},
 
   beforeEnter() {
-    // return loadImages(
-    //   data.next.container,
-    //   this.updatePercent.bind(this)
-    // )
   },
 
   beforeLeave() {},
 
   enter() {},
 
-  init(parent, config) {
+  init(call, config) {
     this.container = document.querySelector('#js-loader')
-    this.parent = parent
-    this.call = this.parent.call.bind(this.parent)
+    this.call = call
     this.config = config
   },
 
@@ -50,7 +45,7 @@ export default {
       enter: this.enter.bind(this),
       init: this.init.bind(this),
       leave: this.leave.bind(this),
-      name: this.name,
+      name: 'basic',
       once: this.once.bind(this),
     }
   },
@@ -69,12 +64,10 @@ export default {
     return tl.finished
   },
 
-  name: 'basic',
-
   once(data) {
     this.afterEnter(data).then(() => {
       this.after()
-      this.parent.after()
+      this.call('after', null, 'Website', 'website')
     })
   },
 }.invoke()

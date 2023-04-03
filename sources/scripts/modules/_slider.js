@@ -1,7 +1,7 @@
 import { module as mmodule } from 'modujs'
 import EmblaCarousel from 'embla-carousel'
 import Autoplay from 'embla-carousel-autoplay'
-import { throttle } from '../utils/utils'
+import { throttle } from '../utils/tools'
 
 export default class Slider extends mmodule {
   constructor(m) {

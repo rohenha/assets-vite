@@ -2,7 +2,27 @@
   "name": "assets-vite",
   "version": "1.0.0",
   "description": "",
+  "homepage": "https://github.com/rohenha/assets-vite",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rohenha/assets-vite.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rohenha/assets-vite/issues"
+  },
+  "contributors": [
+    {
+      "name": "Cyrielle Vuillemin",
+      "email": "cyrielle@troa.fr",
+      "url": "https://troa.fr"
+    },
+    {
+      "name": "Romain Breton",
+      "email": "romain@troa.fr",
+      "url": "https://troa.fr"
+    }
+  ],
   "scripts": {
     "dev": "NODE_ENV=dev vite",
     "watch": "NODE_ENV=dev vite build --watch",
@@ -44,6 +64,8 @@
     "loconative-scroll": "github:quentinhocde/loconative-scroll",
     "modujs": "^1.4.2",
     "rollup": "^3.19.1",
-    "stats.js": "^0.17.0"
+    "stats.js": "^0.17.0",
+    "transformation-matrix": "^2.10.0",
+    "vanilla-lazyload": "^17.8.3"
   }
 }
