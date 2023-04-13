@@ -7,12 +7,16 @@ const files = fs.readdirSync(config.sprite.input).filter(file => file.endsWith('
 
 const sprite = SVGSpriter({
   mode: {
-    symbol: true
+    symbol: true,
+    inline: true
   },
   svg: { // General options for created SVG files
     xmlDeclaration: false, // Add XML declaration to SVG sprite
     doctypeDeclaration: false, // Add DOCTYPE declaration to SVG sprite
-    dimensionAttributes: false // Width and height attributes on the sprite
+    dimensionAttributes: false, // Width and height attributes on the sprite
+    rootAttributes: {
+      style: 'position:absolute; top:0; left:0; width:0; height:0;'
+    }
   },
 });
 

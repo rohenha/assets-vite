@@ -6,4 +6,12 @@ export default class Menu extends mmodule {
     this.state = false
     this.events = {}
   }
+
+  init() {
+    this.getValue('test', 'Website', 'website')
+  }
+
+  getValue(value, module, modId) {
+    console.log(this.modules[module][modId][value]);
+  }
 }

@@ -8,7 +8,6 @@ import { modulesConfig } from '../organisms/_modules-config'
 export default class Website extends mmodule {
   constructor(m) {
     super(m)
-    this.isAnimating = false
     this.updateModules = false
     this.isAnimating = this.el.dataset.animate !== undefined
 

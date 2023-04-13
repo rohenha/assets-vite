@@ -30,7 +30,7 @@ export const createHTML = async (file) => {
 export const createCSS = (file) => {
   const content = `.${file.class} {}
   `;
-  const path = `${config.src}/styles/${file.atomic}/_${file.slug}.scss`;
+  const path = `${config.src}/styles/${file.atomic}/`;
   const filename = `_${file.slug}.scss`
   return generateFile(content, path, path + filename)
 }

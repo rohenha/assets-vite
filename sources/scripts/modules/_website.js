@@ -12,7 +12,7 @@ export default class Website extends mmodule {
   constructor(m) {
     super(m)
     this.initalized = false
-    this.isAnimating = false
+    this.test = 'toto'
     this.updateModules = false
     this.isAnimating = this.el.dataset.animate !== undefined
 
