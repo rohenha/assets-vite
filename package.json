@@ -46,6 +46,7 @@
     "eslint": "^7.23.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-prettier": "^8.1.0",
+    "eslint-import-resolver-alias": "^1.1.2",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-prettier": "^3.3.1",
     "fontmin": "^0.9.9",
@@ -80,6 +81,7 @@
     "modujs": "^1.4.2",
     "rollup": "^3.19.1",
     "stats.js": "^0.17.0",
+    "swup": "^3.0.6",
     "transformation-matrix": "^2.10.0",
     "vanilla-lazyload": "^17.8.3"
   }

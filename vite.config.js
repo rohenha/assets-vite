@@ -3,16 +3,28 @@
 ────────────────────────────────────────────────────────── */
 import { defineConfig } from 'vite'
 import browserslistToEsbuild from 'browserslist-to-esbuild'
+import { fileURLToPath } from 'url'
+import path, { dirname } from 'path'
 
 /* ─────────────────────────────────────────────────────── */
 import getPlugins from './utils/vite/plugins'
 import config from './utils/config'
+
+const filename = fileURLToPath(import.meta.url)
+const globDirname = dirname(filename)
+const folder = path.resolve(globDirname, `${config.src}/`)
 /* ─────────────────────────────────────────────────────── */
 
 export default () =>
   defineConfig({
     publicDir: `${config.src}/${config.folder}`,
     base: `/${config.folder}`,
+    resolve: {
+      alias: {
+        '@styles/': `${folder}/styles/`,
+        '@scripts/': `${folder}/scripts/`,
+      },
+    },
     server: {
       cors: true,
       host: '0.0.0.0',

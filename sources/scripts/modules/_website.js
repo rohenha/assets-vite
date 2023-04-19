@@ -1,12 +1,13 @@
 import { module as mmodule } from 'modujs'
 import barba from '@barba/core'
+// import Swup from 'swup'
 import Stats from 'stats.js'
 import LazyLoad from 'vanilla-lazyload'
-import { html, body, isDebug } from '../utils/environment'
-import { debounce } from '../utils/tools'
-import * as transitions from '../organisms/_transitions'
-import * as views from '../organisms/_views'
-import { modulesConfig } from '../organisms/_modules-config'
+import * as views from '@scripts/organisms/_views'
+import { modulesConfig } from '@scripts/organisms/_modules-config'
+import { html, body, isDebug } from '@scripts/utils/environment'
+import { debounce } from '@scripts/utils/tools'
+import * as transitions from '@scripts/organisms/_transitions'
 
 export default class Website extends mmodule {
   constructor(m) {
@@ -37,7 +38,7 @@ export default class Website extends mmodule {
     const config = {
       debug: isDebug,
       transitions: this.initConfigArray(transitions),
-      views: this.initConfigArray(views)
+      views: this.initConfigArray(views),
     }
 
     if (isDebug) {
@@ -45,6 +46,9 @@ export default class Website extends mmodule {
       config.timeout = 10000
     }
 
+    // this.swup = new Swup({
+    //   /* options */
+    // })
     barba.init(config)
   }
 

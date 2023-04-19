@@ -12,6 +12,6 @@ export default class Menu extends mmodule {
   }
 
   getValue(value, module, modId) {
-    console.log(this.modules[module][modId][value]);
+    console.log(this.modules[module][modId][value])
   }
 }
